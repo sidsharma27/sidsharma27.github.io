@@ -57,9 +57,7 @@ The SDK must be integrated into the sample project before it can run.
 
 	![sdksource_after.jpg](images/demoLoad.jpg)
 
-5. In your browser window, paste the AppID into the `Key` UI text field.
-
-	![download.jpg](images/demoKey.jpg)
+5. In your browser window, paste the AppID into the `App ID` UI text field.
 
 6. Press the `Join` UI button to join the call. As soon as someone else joins the call, the call will be started and you will see each other in the browser window.
 
