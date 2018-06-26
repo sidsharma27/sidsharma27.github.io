@@ -79,7 +79,7 @@ var videoSelect = document.querySelector('select#videoSource');
 
 function join() {
   document.getElementById("join").disabled = true;
-  document.getElementById("video").disabled = true;
+  //document.getElementById("video").disabled = true;
   var channel_key = null;
 
   console.log("Init AgoraRTC client with vendor key: " + key.value);
@@ -91,7 +91,7 @@ function join() {
 
       camera = videoSource.value;
       microphone = audioSource.value;
-      localStream = AgoraRTC.createStream({streamID: uid, audio: true, cameraId: camera, microphoneId: microphone, video: document.getElementById("video").checked, screen: false});
+      localStream = AgoraRTC.createStream({streamID: uid, audio: true, cameraId: camera, microphoneId: microphone, video: true, screen: false});
       //localStream = AgoraRTC.createStream({streamID: uid, audio: false, cameraId: camera, microphoneId: microphone, video: false, screen: true, extensionId: 'minllpmhdgpndnkomcoccfekfegnlikg'});
       if (document.getElementById("video").checked) {
         localStream.setVideoProfile('720p_3');
