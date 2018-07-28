@@ -56,7 +56,7 @@ Channel: <input id="channel" type="text" value="test" size="4"></input>
 <script language="javascript">
 
 if(!AgoraRTC.checkSystemRequirements()) {
-  alert("browser is no support webRTC");
+  alert("browser does not support webRTC");
 }
 
 /* select Log type */
@@ -83,7 +83,7 @@ function join() {
   var channel_key = null;
 
   console.log("Init AgoraRTC client with vendor key: " + key.value);
-  client = AgoraRTC.createClient({mode: ‘h264_interop’});
+  client = AgoraRTC.createClient({mode: “rtc”, codec: “vp8”});
 
   client.init(key.value, function () {
     console.log("AgoraRTC client initialized");
