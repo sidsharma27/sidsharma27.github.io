@@ -83,7 +83,7 @@ function join() {
   var channel_key = null;
 
   console.log("Init AgoraRTC client with vendor key: " + key.value);
-  client = AgoraRTC.createClient({mode: ‘h264_interop’});	
+  client = AgoraRTC.createClient({mode: "interop"});
 
   client.init(key.value, function () {
     console.log("AgoraRTC client initialized");
