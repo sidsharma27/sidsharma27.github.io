@@ -48,7 +48,7 @@ Channel: <input id="channel" type="text" value="test" size="4"></input>
     </div-->
 <div id="video" style="margin:0 auto;">
     <div id="agora_local" style="float:right;width:210px;height:147px;display:inline-block;">
-            <iframe style='width:100%; height:100%; border:0;'></iframe>
+            <iframe id = "iframe" style='width:100%; height:100%; border:0;'></iframe>
     </div>
 </div>
 
@@ -119,6 +119,8 @@ function join() {
 
         client.on('stream-published', function (evt) {
           console.log("Publish local stream successfully");
+           
+           document.write(document.getElementById("iframe_id").contentWindow.location.href);
         });
       }, function (err) {
         console.log("getUserMedia failed", err);
